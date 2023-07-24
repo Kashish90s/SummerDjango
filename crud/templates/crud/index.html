@@ -1,1 +1,6 @@
-<h1>Kashish is the greatest</h1>
+<h1>first page</h1>
+
+{%if blogs%} {%for blog in blogs%}
+<h2>{{blog.title}}</h2>
+<h4>{{blog.description}}</h4>
+{%endfor%} {%endif%}

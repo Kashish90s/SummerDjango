@@ -1,0 +1,13 @@
+<h1>first page</h1>
+
+{%if blog%}
+<h2>{{blog.title}}</h2>
+<h4>{{blog.description}}</h4>
+<a href="{%url 'crud:deleteData' blog.id%}" type="submit">Delete</a>
+<a href="{%url 'crud:updateData' blog.id%}" type="submit">Update</a>
+{%endif%} {%if blogs%} {%for blog in blogs%}
+<a href="{%url 'crud:particular' blog.id%}">
+  <h2>{{blog.title}}</h2>
+</a>
+<h4>{{blog.description}}</h4>
+{%endfor%} {%endif%}
